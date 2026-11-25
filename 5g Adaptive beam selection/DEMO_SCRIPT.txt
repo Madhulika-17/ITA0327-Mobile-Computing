@@ -1,0 +1,15 @@
+FACULTY DEMONSTRATION SCRIPT
+
+Good morning. My project is titled "Neural Network-Based Adaptive Beam Selection for Improved Mobile User Connectivity in 5G Networks."
+
+A 5G base station uses directional beams to focus radio energy toward a mobile user. When the user moves, the best beam direction can change. Selecting an unsuitable beam may reduce signal quality.
+
+In this implementation, the base station is represented at the centre, with eight directional beams. The mobile user moves inside a simulated coverage area. The channel model estimates the signal level for each beam, considering distance, direction, blockage and fading.
+
+I generated labelled training data and trained a feedforward neural network to predict the beam index. During the live simulation, the model receives user and channel features and predicts a beam. I also implemented a conventional strongest-measured-beam baseline and compare both using RSSI, SNR, estimated throughput, outage and beam-switch count.
+
+The dashboard is a software simulation. It does not control a real 5G radio or physical phone. Real deployment would require SDR or 5G testbed hardware.
+
+[Press START, change speed, enable blockage, then show the result CSV and plots.]
+
+The main contribution is integrating a trained neural beam classifier with a moving-user channel simulation and a measurable baseline comparison.
